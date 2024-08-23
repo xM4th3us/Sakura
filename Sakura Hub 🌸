@@ -2808,7 +2808,7 @@ getgenv().StealingOneForAll = function()
                     if game:GetService("Players").LocalPlayer.Data.Mastery.Value < 2 then
                         if workspace.Map.NPCs:FindFirstChild("Kuzma") then
                             for i,v in pairs(game:GetService("Workspace").Map.NPCs.Kuzma:GetChildren()) do
-                                if v:IsA("ClickDetector") then fireclickdetector(v);
+                                if v:IsA("ProximityPrompt") then fireproximityprompt(v);
                                     for i = 1,15 do task.wait(0.15);
                                         local SkipDialogue = game:GetService("Players").LocalPlayer.PlayerGui.Dialogue.Outer.Inner.TextLabel;
     
@@ -2819,17 +2819,17 @@ getgenv().StealingOneForAll = function()
                             end
                         else
                             if not Prompt then
-                                BoredLibrary.prompt("Sakura Hub 🌸","Waiting for Kuzma To Spawn",1.5);Prompt = true;
+                                BoredLibrary.prompt("Sakura Hub 🌸","Esperando pelo spawn do Kuzma",1.5);Prompt = true;
                             end  
                         end
                     else
                         if not Prompt then
-                            BoredLibrary.prompt("Sakura Hub 🌸","Mastery is not Enough",1.5);Prompt = true;
+                            BoredLibrary.prompt("Sakura Hub 🌸","Maestria abaixo",1.5);Prompt = true;
                         end
                     end
                 else
                     if not Prompt then
-                        BoredLibrary.prompt("Sakura Hub 🌸","You are not Standless",1.5);Prompt = true;
+                        BoredLibrary.prompt("Sakura Hub 🌸","Não esta sem stand",1.5);Prompt = true;
                     end
                 end
             end)
