@@ -1,9 +1,9 @@
--- // Sakura Hub 🌸 \\ -- | (Version 1.31) [ Made by ThroughTheFireAndFlames#9925 :3 ] Discontinued (For Now)
+-- // Sakura Hub 🌸 \\ -- | (Version 1.31) [ Made by ThroughTheFireAndFlames#9925 :3 ] Updated (For xM4th3us)
 --[[---------------------------------------------------------------------------------------------------
     This script updates a lot, Use this loadstring to be in the latest version:
 
     getgenv().ToggleUI = "J" -- //  Key Toggle "J" set by default however you can change it.
-    getgenv().SakuraHub = "https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/SakuraHub";
+    getgenv().SakuraHub = "https://raw.githubusercontent.com/xM4th3us/Sakura/main/Sakura%20Hub%20🌸?token=GHSAT0AAAAAACWQGYIL4DN5JEYD3B4OSJ5SZWI5S6Q";
 
     pcall(function()
         loadstring(game:HttpGet(getgenv().SakuraHub))();
