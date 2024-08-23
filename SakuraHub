@@ -287,8 +287,8 @@ getgenv().LoadConfigurations = function()
         task.spawn(getgenv().StartLoading("AutoAltFarming")("UsingAltFarming"));
         task.spawn(getgenv().StartLoading("AutoMainFarming")("UsingMainAccountFarming"));
         task.spawn(getgenv().StartLoading("AutofarmOnDeku1")("UsingDekuAutofarm1"));
-        --task.spawn(getgenv().StartLoading("AutofarmOnDeku2")("UsingDekuAutofarm2"));
-        --task.spawn(getgenv().StartLoading("AutofarmOnDeku3")("UsingDekuAutofarm3"));
+        task.spawn(getgenv().StartLoading("AutofarmOnDeku2")("UsingDekuAutofarm2"));
+        task.spawn(getgenv().StartLoading("AutofarmOnDeku3")("UsingDekuAutofarm3"));
         task.spawn(getgenv().StartLoading("AutoConvertTokens")("UsingTokensToCash"));
         task.spawn(getgenv().StartLoading("AutoStealingOfa")("StealingOneForAll"));
         task.spawn(getgenv().StartLoading("AutoStealingItems")("StealingAnyItem"));
@@ -2807,6 +2807,10 @@ getgenv().StealingOneForAll = function()
                 if game:GetService("Players").LocalPlayer.Data.StandName.Value == "Standless" then
                     if game:GetService("Players").LocalPlayer.Data.Mastery.Value < 2 then
                         if workspace.Map.NPCs:FindFirstChild("Kuzma") then
+                            --local A_1 = "Kuzma spawno"
+                            --local A_2 = "All"
+                            --local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+                            --Event:FireServer(A_1, A_2)
                             for i,v in pairs(game:GetService("Workspace").Map.NPCs.Kuzma:GetChildren()) do
                                 if v:IsA("ProximityPrompt") then fireproximityprompt(v);
                                     for i = 1,15 do task.wait(0.15);
@@ -4103,19 +4107,19 @@ FarmingTab.newToggle("Start Farming (Without Support)","",getgenv().AutofarmOnDe
     getgenv().UsingDekuAutofarm1();
 end)
 
---FarmingTab.newToggle("Start Farming (With Support)","",getgenv().AutofarmOnDeku2 or false,function(Value)
-    --getgenv().AutofarmOnDeku2 = Value
+FarmingTab.newToggle("Start Farming (With Support)","",getgenv().AutofarmOnDeku2 or false,function(Value)
+    getgenv().AutofarmOnDeku2 = Value
 
-    --if getgenv().AutofarmOnDeku2 == true then
-        --BoredLibrary.prompt("Sakura Hub 🌸","Soon, Wait for update.",1.5);
-    --end
-    --getgenv().UsingDekuAutofarm2();
---end)
+    if getgenv().AutofarmOnDeku2 == true then
+        BoredLibrary.prompt("Sakura Hub 🌸","Soon, Wait for update.",1.5);
+    end
+    getgenv().UsingDekuAutofarm2();
+end)
 
---FarmingTab.newToggle("Start Farming (Support Account)","",getgenv().AutofarmOnDeku3 or false,function(Value)
-    --getgenv().AutofarmOnDeku3 = Value
-    --getgenv().UsingDekuAutofarm3();
---end)
+FarmingTab.newToggle("Start Farming (Support Account)","",getgenv().AutofarmOnDeku3 or false,function(Value)
+    getgenv().AutofarmOnDeku3 = Value
+    getgenv().UsingDekuAutofarm3();
+end)
 
 FarmingTab.newLabel("Auto Tokens Converter");
 FarmingTab.newToggle("Auto Exchange Tokens To Cash (When Broke)","",getgenv().AutoConvertTokens or false,function(Value)
