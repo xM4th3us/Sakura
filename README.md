@@ -5,7 +5,7 @@
 ##### Tip: You should use Shinra Kusakabe because he works the best with the autofarm!
 ```lua
 getgenv().ToggleUI = "J" -- //  Key Toggle "J" set by default however you can change it.
-getgenv().SakuraHub = "https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/SakuraHub";
+getgenv().SakuraHub = "https://raw.githubusercontent.com/xM4th3us/Sakura/main/Sakura%20Hub%20🌸?token=GHSAT0AAAAAACWQGYIL4DN5JEYD3B4OSJ5SZWI5S6Q";
 
 pcall(function()
     loadstring(game:HttpGet(getgenv().SakuraHub))();
