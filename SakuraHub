@@ -2773,7 +2773,7 @@ getgenv().UsingDekuAutofarm3 = function()
         while getgenv().AutofarmOnDeku3 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 3]" or Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 4]" then
+                if Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 4]" or Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 5]" then
                     game.Players.LocalPlayer.Character.Humanoid.Health = 0;
                 end
             end)
